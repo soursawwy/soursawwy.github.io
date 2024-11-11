@@ -1,10 +1,10 @@
  $(document).ready(function(){
   // Anagram check
   $("#cekAnagram").on("click", function(){
-    let str1 = $("#string_1").val();
-    let str2 = $("#string_2").val();
-    let sort1 = str1.toLowerCase().split("").sort().join("");
-    let sort2 = str2.toLowerCase().split("").sort().join("");
+    let str1 = $("#string_1").val().toLowerCase();
+    let str2 = $("#string_2").val().toLowerCase();
+    let sort1 = str1.split("").sort().join("");
+    let sort2 = str2.split("").sort().join("");
     if (sort1 === sort2) {
       $("#string_3").val("berhasil");
     } else {
@@ -14,8 +14,8 @@
 
   // Palindrome check
   $("#cekPalindrome").on("click", function(){
-    let str = $("#string_palindrome").val();
-    let reversedStr = str.toLowerCase().split("").reverse().join("");
+    let str = $("#string_palindrome").val().toLowerCase();
+    let reversedStr = str.split("").reverse().join("");
     if (str === reversedStr) {
       $("#hasil_palindrome").val("berhasil");
     } else {
